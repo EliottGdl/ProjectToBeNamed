@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         transform.Translate(movement * speed * Time.deltaTime);
+        Debug.Log(movement * speed * Time.deltaTime);
+        Debug.Log("VERTICAL : " + Input.GetAxis("Vertical"));
 
         if (Input.GetKeyDown("space")) {
             Debug.Log("HEY");
